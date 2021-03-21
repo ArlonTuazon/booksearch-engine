@@ -10,7 +10,7 @@ const SavedBooks = () => {
   const [removeBook, {error}] = useMutation(REMOVE_BOOK);
   //const [userData, setUserData] = useState({});
   const {loading, data}= useQuery(GET_USER);
-  const userData=data ?.me || {};
+  const userData = data?.me || {};
   // use this to determine if `useEffect()` hook needs to run again
 //  const userDataLength = Object.keys(userData).length;
 
@@ -48,12 +48,12 @@ const SavedBooks = () => {
     }
 
     try {
-      const response = await removeBook
+      const {data} = await removeBook
       ({variables: {bookId}
       
       });
            
-      if (error) {
+      if (error ) {
         throw new Error('something went wrong!');
       }
 
