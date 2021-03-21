@@ -3,7 +3,7 @@ import Auth from '../../utils/auth';
 import { Link } from 'react-router-dom';
 import { Navbar, Nav, Container, Modal, Tab } from 'react-bootstrap';
 import LoginForm from '../LoginForm';
-import SignupForm from '../SignupForm';
+import SignUpForm from '../SignupForm';
 
 const AppNavbar = () => {
   // set modal display state
@@ -63,7 +63,7 @@ const AppNavbar = () => {
                 <LoginForm handleModalClose={() => setShowModal(false)} />
               </Tab.Pane>
               <Tab.Pane eventKey='signup'>
-                <SignupForm handleModalClose={() => setShowModal(false)} />
+                <SignUpForm handleModalClose={() => setShowModal(false)} />
               </Tab.Pane>
             </Tab.Content>
           </Modal.Body>
